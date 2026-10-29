@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Admin Login | KM's Frozen Goods</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="auth-page admin">
+  <aside class="auth-side">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">KM</span>
+      <span class="brand-text">KM's Frozen Goods</span>
+    </a>
+    <div class="auth-side-copy">
+      <span class="badge-admin">Staff only</span>
+      <h1>Admin Panel</h1>
+      <p>Sign in to manage products, stock and customer orders.</p>
+    </div>
+    <a class="auth-back" href="index.html">&larr; Back to website</a>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <div id="configWarning" class="alert alert-danger" style="display:none;"></div>
+      <div id="authMsg" class="alert" style="display:none;" role="alert"></div>
+
+      <form id="adminForm" novalidate>
+        <h2>Admin Log In</h2>
+        <p class="auth-sub">This page is for store administrators only. Customers should use the <a href="login.html">customer login</a>.</p>
+        <label for="adminEmail">Admin Email</label>
+        <input class="form-control" id="adminEmail" type="email" autocomplete="username" required>
+        <label for="adminPassword">Password</label>
+        <input class="form-control" id="adminPassword" type="password" autocomplete="current-password" required>
+        <div class="form-row">
+          <label class="check"><input type="checkbox" id="showPw"> Show password</label>
+        </div>
+        <button class="btn btn-primary btn-block" id="adminBtn" type="submit">Log In to Admin Panel</button>
+      </form>
+    </div>
+  </main>
+</div>
+<script type="module" src="admin-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log In or Sign Up | KM's Frozen Goods</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="auth-page">
+  <aside class="auth-side">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">KM</span>
+      <span class="brand-text">KM's Frozen Goods</span>
+    </a>
+    <div class="auth-side-copy">
+      <h1>Welcome back to Frost &amp; Fresh.</h1>
+      <p>Log in to your account to browse the catalog and place your orders. New here? Create a free account in under a minute.</p>
+    </div>
+    <a class="auth-back" href="index.html">&larr; Back to home</a>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab active" id="tabLogin" role="tab" aria-selected="true" aria-controls="panelLogin">Log In</button>
+        <button type="button" class="tab" id="tabSignup" role="tab" aria-selected="false" aria-controls="panelSignup">Sign Up</button>
+      </div>
+
+      <div id="configWarning" class="alert alert-danger" style="display:none;"></div>
+      <div id="authMsg" class="alert" style="display:none;" role="alert"></div>
+
+      <form id="loginForm" class="panel" novalidate>
+        <h2>Customer Log In</h2>
+        <label for="loginEmail">Email</label>
+        <input class="form-control" id="loginEmail" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <label for="loginPassword">Password</label>
+        <input class="form-control" id="loginPassword" type="password" autocomplete="current-password" placeholder="Your password" required>
+        <div class="form-row">
+          <label class="check"><input type="checkbox" data-toggle-pw="loginPassword"> Show password</label>
+          <button type="button" class="link-btn" id="forgotBtn">Forgot password?</button>
+        </div>
+        <button class="btn btn-primary btn-block" id="loginBtn" type="submit">Log In</button>
+        <p class="auth-switch">No account yet? <button type="button" class="link-btn" data-go="signup">Sign up</button></p>
+      </form>
+
+      <form id="signupForm" class="panel" style="display:none;" novalidate>
+        <h2>Create Your Account</h2>
+        <label for="signupName">Full Name</label>
+        <input class="form-control" id="signupName" type="text" autocomplete="name" placeholder="Juan Dela Cruz" required>
+        <label for="signupEmail">Email</label>
+        <input class="form-control" id="signupEmail" type="email" autocomplete="email" placeholder="you@example.com" required>
+        <label for="signupPassword">Password</label>
+        <input class="form-control" id="signupPassword" type="password" autocomplete="new-password" placeholder="At least 6 characters" required>
+        <label for="signupConfirm">Confirm Password</label>
+        <input class="form-control" id="signupConfirm" type="password" autocomplete="new-password" placeholder="Re-enter your password" required>
+        <div class="form-row">
+          <label class="check"><input type="checkbox" data-toggle-pw="signupPassword,signupConfirm"> Show passwords</label>
+        </div>
+        <button class="btn btn-primary btn-block" id="signupBtn" type="submit">Create Account</button>
+        <p class="auth-switch">Already have an account? <button type="button" class="link-btn" data-go="login">Log in</button></p>
+      </form>
+
+      <p class="auth-foot">Store staff? <a href="admin-login.html">Admin login</a></p>
+    </div>
+  </main>
+</div>
+<script type="module" src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="KM's Frozen Goods in Marikina City. Browse our full catalog of frozen meats, sausages, seafood, dumplings, Korean products and more, with prices.">
+<title>KM's Frozen Goods | Quality Frozen Products in Marikina City</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="home">
+  <div class="wrap header-flex">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">KM</span>
+      <span class="brand-text">KM's Frozen Goods</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#productsSection">Products</a>
+      <a href="#how">How to Order</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button type="button" class="cart-btn" id="cartBtn" aria-label="Open your order">Cart <span class="cart-count" id="cartCount" style="display:none;">0</span></button>
+      <span class="auth-area" id="authArea">
+        <a href="login.html" class="nav-login">Log In</a>
+        <a href="login.html?mode=signup" class="nav-cta">Sign Up</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">Marikina City, Philippines</span>
+        <h1>Frost &amp; Fresh, <span>delivered to your door.</span></h1>
+        <p>KM's Frozen Goods brings quality frozen products to your kitchen or your business. Create an account, browse the catalog and place your order online.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#productsSection">Browse Products</a>
+          <a class="btn btn-ghost" href="login.html?mode=signup">Create Account</a>
+        </div>
+        <ul class="hero-stats" aria-label="Store highlights">
+          <li><strong id="statProducts">0</strong><span>Products</span></li>
+          <li><strong id="statCategories">0</strong><span>Categories</span></li>
+          <li><strong>Local</strong><span>Marikina based</span></li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img" role="img" aria-label="Frozen goods"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-section" id="productsSection">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Catalog</span>
+        <h2>Our Products</h2>
+        <p>Search by name or pick a category to find what you need quickly.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10 2a8 8 0 105.3 14l5.4 5.4 1.4-1.4-5.4-5.4A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z" fill="currentColor"/></svg>
+          <input type="search" id="productSearch" placeholder="Search products (e.g. longganisa, siomai, kimchi)" aria-label="Search products" autocomplete="off">
+        </div>
+        <div class="chips" id="categoryChips" role="group" aria-label="Filter by category"></div>
+      </div>
+
+      <p class="alert alert-danger" id="orderNotice" style="display:none;" role="status"></p>
+      <p class="result-count" id="resultCount" aria-live="polite"></p>
+      <p class="empty-msg" id="productsEmpty" style="display:none;">No products available right now. Please check back soon.</p>
+      <div id="productsGrid"></div>
+    </div>
+  </section>
+
+  <section class="how-section" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Simple &amp; Easy</span>
+        <h2>How to Order</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="step-num">1</span><h3>Create an Account</h3><p>Sign up for free with your email so we can keep track of your orders.</p></li>
+        <li><span class="step-num">2</span><h3>Pick Your Items</h3><p>Browse the catalog, add items to your order and check out with your delivery details.</p></li>
+        <li><span class="step-num">3</span><h3>We Prepare It</h3><p>We confirm your order and get it ready. Track it anytime under My Orders.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why KM's</span>
+        <h2>Why Choose Us</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <span class="feature-icon" aria-hidden="true">&#10052;</span>
+          <h3>Quality Frozen Goods</h3>
+          <p>A steady stock of well-kept frozen products, always ready to order.</p>
+        </div>
+        <div class="feature-box">
+          <span class="feature-icon" aria-hidden="true">&#9776;</span>
+          <h3>Wide Selection</h3>
+          <p>From meats and sausages to seafood, dumplings, Korean favorites and ramen, all in one place.</p>
+        </div>
+        <div class="feature-box">
+          <span class="feature-icon" aria-hidden="true">&#8369;</span>
+          <h3>Clear Prices</h3>
+          <p>Browse an organized catalog and check prices before you order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Contact</span>
+        <h2>Get In Touch</h2>
+        <p>Have a question or ready to place an order? Send us a message and we will get back to you.</p>
+        <ul class="info-list">
+          <li><strong>Location</strong><span>Marikina City, Philippines</span></li>
+          <li><strong>Email</strong><a href="mailto:kmsfrozengoods@gmail.com">kmsfrozengoods@gmail.com</a></li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div id="contactMsg" class="alert" style="display:none;" role="status"></div>
+        <label for="cName">Name</label>
+        <input class="form-control" id="cName" type="text" placeholder="Your name" required>
+        <label for="cEmail">Email Address</label>
+        <input class="form-control" id="cEmail" type="email" placeholder="you@example.com" required>
+        <label for="cMessage">Message</label>
+        <textarea class="form-control" id="cMessage" rows="4" placeholder="Tell us how we can help" required></textarea>
+        <button class="btn btn-primary btn-block" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h6>About Us</h6>
+        <p>KM's Frozen Goods is a small frozen-goods store based in Marikina City, dedicated to fresh, reliable stock for local customers.</p>
+      </div>
+      <div>
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="#productsSection">Products</a></li>
+          <li><a href="login.html">Customer Login</a></li>
+          <li><a href="login.html?mode=signup">Create Account</a></li>
+          <li><a href="admin-login.html">Admin Login</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Contact</h6>
+        <p>Marikina City, Philippines</p>
+        <p><a href="mailto:kmsfrozengoods@gmail.com">kmsfrozengoods@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2026 Copyright: KM's Frozen Goods</div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+
+<script src="catalog.js"></script>
+<script src="landing.js"></script>
+<script type="module" src="site-auth.js"></script>
+<script type="module" src="products-live.js"></script>
+<script type="module" src="cart.js"></script>
+</body>
+</html>
